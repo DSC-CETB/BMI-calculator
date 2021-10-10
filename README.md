@@ -29,4 +29,10 @@ This application takes input values from the user as gender, age, weight and hei
 Deno Video
 
 [demo](https://drive.google.com/file/d/1qaxwutrEiSuvwbUBE4nxQqCHZjXYaHwU/view?usp=sharing)
+
+## Author
+
+-@RupeshMishra
+![hacktober](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full2.aa1e9d9.svg)
+
     
