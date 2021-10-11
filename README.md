@@ -33,9 +33,11 @@ There is a lot scope for improvement in the application. Feel free the make chan
   
 ## Demo
 
-Deno Video
+Demo Video
 
-[demo](https://drive.google.com/file/d/1qaxwutrEiSuvwbUBE4nxQqCHZjXYaHwU/view?usp=sharing)
+
+https://user-images.githubusercontent.com/57012761/136833613-7889940b-a43f-45cc-9422-82bca3f2e7d0.mp4
+
 
 ## Contact
 
