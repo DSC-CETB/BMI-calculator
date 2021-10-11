@@ -9,12 +9,9 @@
 
 # BMI Calculator Application (Cross Platform - Flutter)
 
-This is a simple mobile application made using flutter to calculate the Body Mass Index value of a person irrespective of their age, height, weight and gender.mThis project is open for contribution
+This is a simple mobile application made using flutter to calculate the Body Mass Index value of a person irrespective of their age, height, weight and gender.mThis project is open for contribution.
 
 ## Features
-
-
-
 <br/>
 <h4>The functionalities of the project includes: </h4>
 <ul>
