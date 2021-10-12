@@ -47,7 +47,7 @@ You can reach us at-
 BMI Calculator is licensed under the New BSD License (MIT). 
 
 
-## Dynamic Portfolio is a part of these Open Source programs
+## BMI Calculator is a part of these Open Source programs
 
 ![hacktober](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full2.aa1e9d9.svg)
 
