@@ -44,7 +44,7 @@ You can reach us at-
 
 ## License
 
-Dynamic Portfolio is licensed under the New BSD License (MIT). 
+BMI Calculator is licensed under the New BSD License (MIT). 
 
 
 ## Dynamic Portfolio is a part of these Open Source programs
