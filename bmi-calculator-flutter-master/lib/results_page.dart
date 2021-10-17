@@ -7,10 +7,12 @@ class ResultsPage extends StatelessWidget {
   ResultsPage(
       {@required this.bmiResult,
       @required this.resultText,
-      @required this.interpretation});
+      @required this.interpretation,
+      @required this.animation});
   final String bmiResult;
   final String resultText;
   final String interpretation;
+  final String animation;
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,11 @@ class ResultsPage extends StatelessWidget {
                   Text(
                     resultText,
                     style: kResultTextStyle,
+                  ),
+                  Image(
+                    image: AssetImage(animation),
+                    width: MediaQuery.of(context).size.width / 5,
+                    height: MediaQuery.of(context).size.height / 5,
                   ),
                   Text(
                     bmiResult,

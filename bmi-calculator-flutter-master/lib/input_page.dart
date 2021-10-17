@@ -1,4 +1,4 @@
-//import 'dart:html';
+import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +26,7 @@ class _InputPageState extends State<InputPage> {
   int height = 180;
   int weight = 60;
   int age = 19;
+  bool inch_or_cm = false;
   // Color maleCardColor = inactiveCardColor;
   // Color femaleCardColor = inactiveCardColor;
   // void updateColor(Gender selectedGender) {
@@ -97,28 +98,52 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReUsuable(
+              onPress: () {
+                setState(() {
+                  inch_or_cm = !inch_or_cm;
+                });
+              },
               colour: kActiveCardColor,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "height",
+                    "HEIGHT",
                     style: kLabelTextStyle,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.baseline,
                     textBaseline: TextBaseline.alphabetic,
-                    children: <Widget>[
-                      Text(
-                        height.toString(),
-                        style: kNumberTextStyle,
-                      ),
-                      Text(
-                        "cm",
-                        style: kLabelTextStyle,
-                      )
-                    ],
+                    children: (inch_or_cm)
+                        ? <Widget>[
+                            Text(
+                              height.toString(),
+                              style: kNumberTextStyle,
+                            ),
+                            Text(
+                              "cm",
+                              style: kLabelTextStyle,
+                            )
+                          ]
+                        : <Widget>[
+                            Text(
+                              ((height * 0.394).round() ~/ 12).toString(),
+                              style: kNumberTextStyle,
+                            ),
+                            Text(
+                              "ft  ",
+                              style: kLabelTextStyle,
+                            ),
+                            Text(
+                              ((height * 0.394).round() % 12).toString(),
+                              style: kNumberTextStyle,
+                            ),
+                            Text(
+                              "inch",
+                              style: kLabelTextStyle,
+                            )
+                          ],
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
@@ -169,7 +194,12 @@ class _InputPageState extends State<InputPage> {
                               icon: FontAwesomeIcons.minus,
                               onPressed: () {
                                 setState(() {
-                                  weight--;
+                                  weight = max(weight - 1, 0);
+                                });
+                              },
+                              onLongPressed: () {
+                                setState(() {
+                                  weight = max(weight - 1, 0);
                                 });
                               },
                             ),
@@ -177,6 +207,11 @@ class _InputPageState extends State<InputPage> {
                             RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
+                                setState(() {
+                                  weight++;
+                                });
+                              },
+                              onLongPressed: () {
                                 setState(() {
                                   weight++;
                                 });
@@ -209,7 +244,12 @@ class _InputPageState extends State<InputPage> {
                               icon: FontAwesomeIcons.minus,
                               onPressed: () {
                                 setState(() {
-                                  age--;
+                                  age = max(age - 1, 0);
+                                });
+                              },
+                              onLongPressed: () {
+                                setState(() {
+                                  age = max(age - 1, 0);
                                 });
                               },
                             ),
@@ -217,6 +257,11 @@ class _InputPageState extends State<InputPage> {
                             RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
+                                setState(() {
+                                  age++;
+                                });
+                              },
+                              onLongPressed: () {
                                 setState(() {
                                   age++;
                                 });
@@ -244,6 +289,7 @@ class _InputPageState extends State<InputPage> {
                           bmiResult: calc.calculatorBMI(),
                           resultText: calc.getResult(),
                           interpretation: calc.getInterpretation(),
+                          animation: calc.getAnimation(),
                         )),
               );
             },
